@@ -7,23 +7,26 @@
  * Bump CACHE_VERSION whenever you deploy updated files.
  */
 
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const CACHE_NAME = `recipes-${CACHE_VERSION}`;
 
+// self.location.pathname gives "/recipe-app/sw.js" — derive base from it
+const BASE = self.location.pathname.replace(/\/sw\.js$/, "");
+
 const PRECACHE_URLS = [
-  "/",
-  "/index.html",
-  "/main.js",
-  "/data.js",
-  "/manifest.json",
-  "/data/recipes.json",
-  "/extractor/categoriser.js",
-  "/views/shopping.js",
-  "/views/mise.js",
-  "/views/cook.js",
-  "/views/editor.js",
-  "/views/flow.js",
-  "/storage.js",
+  `${BASE}/`,
+  `${BASE}/index.html`,
+  `${BASE}/main.js`,
+  `${BASE}/data.js`,
+  `${BASE}/manifest.json`,
+  `${BASE}/data/recipes.json`,
+  `${BASE}/extractor/categoriser.js`,
+  `${BASE}/views/shopping.js`,
+  `${BASE}/views/mise.js`,
+  `${BASE}/views/cook.js`,
+  `${BASE}/views/editor.js`,
+  `${BASE}/views/flow.js`,
+  `${BASE}/storage.js`,
 ];
 
 // ── Install ───────────────────────────────────────────────────────────────────

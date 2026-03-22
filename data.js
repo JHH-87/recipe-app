@@ -27,7 +27,7 @@
  * @returns {Promise<Array>}
  */
 export async function loadRecipes() {
-  const response = await fetch("/data/recipes.json");
+  const response = await fetch(new URL("data/recipes.json", import.meta.url));
   if (!response.ok) {
     throw new Error(`Failed to load recipes: ${response.status} ${response.statusText}`);
   }
