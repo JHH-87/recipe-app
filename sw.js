@@ -7,7 +7,7 @@
  * Bump CACHE_VERSION whenever you deploy updated files.
  */
 
-const CACHE_VERSION = "v7";
+const CACHE_VERSION = "v8";
 const CACHE_NAME = `recipes-${CACHE_VERSION}`;
 
 // self.location.pathname gives "/recipe-app/sw.js" — derive base from it
