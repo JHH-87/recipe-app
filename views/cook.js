@@ -146,7 +146,8 @@ export function playTimerSound(stageIndex = 0) {
 // ─── Pure functions ────────────────────────────────────────────────────────────
 
 export function getCookStages(recipe) {
-  return recipe.stages.filter((s) => s.phase === "cook");
+  // Include cook, rest, and finish — all active/passive cooking stages
+  return recipe.stages.filter((s) => ["cook", "rest", "finish"].includes(s.phase));
 }
 
 export function formatTime(totalSeconds) {

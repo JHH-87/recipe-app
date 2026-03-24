@@ -23,7 +23,6 @@ import {
 } from "./data.js";
 
 import { renderShoppingList, bindShoppingEvents } from "./views/shopping.js";
-import { renderMiseEnPlace } from "./views/mise.js";
 import { renderCookView, bindCookEvents, clearActiveTimer } from "./views/cook.js";
 import { renderEditorForm, bindEditorEvents, buildEmptyRecipe, loadUserRecipes, mergeRecipes } from "./views/editor.js";
 import { renderProcessFlow } from "./views/flow.js";
@@ -42,6 +41,7 @@ let currentServes = null;
 let currentStep   = 0;
 let currentSlug   = null; // track which recipe is open to detect navigation
 let cloudFileHandle = null; // FileSystemFileHandle if user opened a cloud file
+let shopSubMode = "shop"; // shopping sub-mode: 'shop' | 'phase'
 
 // ─── Bootstrap ────────────────────────────────────────────────────────────────
 
@@ -84,6 +84,7 @@ function route() {
       currentServes = recipe.serves;
       currentStep   = 0;
       currentSlug   = slug;
+      shopSubMode   = "shop";
       clearActiveTimer();
     }
 
@@ -163,7 +164,7 @@ function renderDetailView(recipe, mode, root) {
     servesMultiplier(recipe, currentServes ?? recipe.serves)
   );
 
-  const tabs = ["shopping", "mise", "cook", "flow"].map((m) => `
+  const tabs = ["shopping", "cook", "flow"].map((m) => `
     <button
       class="mode-tab ${m === mode ? "mode-tab--active" : ""}"
       data-mode="${m}"
@@ -191,15 +192,14 @@ function renderDetailView(recipe, mode, root) {
 }
 
 function tabLabel(mode) {
-  return { shopping: "Shopping", mise: "Mise en place", cook: "Cook", flow: "Flow" }[mode];
+  return { shopping: "Shopping", cook: "Cook", flow: "Flow" }[mode];
 }
 
 // ─── Mode panel ───────────────────────────────────────────────────────────────
 
 function renderModePanel(scaledRecipe, mode) {
   switch (mode) {
-    case "shopping": return renderShoppingList(scaledRecipe);
-    case "mise":     return renderMiseEnPlace(scaledRecipe);
+    case "shopping": return renderShoppingList(scaledRecipe, shopSubMode);
     case "cook":     return renderCookView(scaledRecipe, currentStep);
     case "flow":     return renderProcessFlow(scaledRecipe, currentSlug);
     default:         return renderShoppingList(scaledRecipe);
@@ -228,7 +228,10 @@ function bindDetailEvents(recipe, scaled, mode, root) {
 
   // Mode-specific bindings
   if (mode === "shopping") {
-    bindShoppingEvents(scaled);
+    bindShoppingEvents(scaled, (newSubMode) => {
+      shopSubMode = newSubMode;
+      renderDetailView(recipe, mode, root);
+    });
   }
 
   if (mode === "cook") {

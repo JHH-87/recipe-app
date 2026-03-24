@@ -1702,23 +1702,5 @@
         "method": "Reheat the masala sauce. Fold in the grilled chicken pieces. Serve immediately."
       }
     ]
-  },
-  {
-    "title": "Test",
-    "serves": 4,
-    "stages": [
-      {
-        "label": "Stage 1",
-        "phase": "cook",
-        "ingredients": [
-          {
-            "item": "1 frozen pizza",
-            "prep": null,
-            "category": "other"
-          }
-        ],
-        "method": "test"
-      }
-    ]
   }
 ]
