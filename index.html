@@ -1410,6 +1410,190 @@
       width: 100%;
     }
 
+
+    /* ── Detail header actions (edit + delete) ──────────────────────────────── */
+    .detail-header__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .detail-action-btn {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      color: rgba(250,247,242,0.7);
+      background: rgba(250,247,242,0.1);
+      border: none;
+      cursor: pointer;
+      transition: background 0.12s, color 0.12s;
+      text-decoration: none;
+    }
+
+    .detail-action-btn:hover {
+      background: rgba(250,247,242,0.2);
+      color: var(--bg);
+    }
+
+    .detail-action-btn--delete:hover {
+      background: rgba(180,60,60,0.4);
+      color: #fff;
+    }
+
+    /* ── Page header tools ───────────────────────────────────────────────────── */
+    .page-header__tools {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .theme-toggle-btn {
+      font-size: 1rem;
+      padding: 8px;
+      color: var(--ink-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.15s;
+      line-height: 1;
+    }
+
+    .theme-toggle-btn:hover { color: var(--accent); }
+
+    /* ── Move stage buttons ──────────────────────────────────────────────────── */
+    .editor-stage__controls {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .editor-btn--move {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+    }
+
+    .editor-btn--move:disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
+
+    .editor-btn--move:not(:disabled):hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Basic / minimal theme ───────────────────────────────────────────────── */
+    body.theme-basic {
+      --bg:           #FFFFFF;
+      --bg-card:      #F8F8F8;
+      --ink:          #1A1A1A;
+      --ink-muted:    #555555;
+      --accent:       #1A1A1A;
+      --accent-light: #EEEEEE;
+      --prep-color:   #333333;
+      --prep-bg:      #EEEEEE;
+      --cook-color:   #1A1A1A;
+      --cook-bg:      #E8E8E8;
+      --border:       #DDDDDD;
+      font-family: 'DM Sans', system-ui, sans-serif;
+    }
+
+    body.theme-basic .page-header__title,
+    body.theme-basic .detail-header__title,
+    body.theme-basic .recipe-card__title,
+    body.theme-basic .cook-stage-card__title,
+    body.theme-basic .mise-section__heading,
+    body.theme-basic .flow-summary__value,
+    body.theme-basic .flow-node__label,
+    body.theme-basic .editor-stage__title,
+    body.theme-basic .sync-section__heading {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    body.theme-basic .page-header__title    { font-size: 1.6rem; }
+    body.theme-basic .detail-header__title  { font-size: 1.3rem; }
+    body.theme-basic .cook-stage-card__title { font-size: 1.2rem; }
+
+    body.theme-basic .recipe-card__title { font-size: 1rem; }
+
+    /* Flatten colours in basic mode */
+    body.theme-basic .detail-header,
+    body.theme-basic .mode-tabs,
+    body.theme-basic .cook-stage-card__header {
+      background: #1A1A1A;
+    }
+
+    body.theme-basic .cook-tab--active {
+      background: #1A1A1A;
+      border-color: #1A1A1A;
+    }
+
+    body.theme-basic .recipe-card:hover,
+    body.theme-basic .recipe-card:active {
+      border-color: #1A1A1A;
+    }
+
+    body.theme-basic .add-recipe-btn:hover,
+    body.theme-basic .editor-btn--add-stage:hover,
+    body.theme-basic .editor-btn--add-ing:hover {
+      border-color: #1A1A1A;
+      color: #1A1A1A;
+    }
+
+    body.theme-basic .cook-stage__number {
+      background: #1A1A1A;
+    }
+
+    body.theme-basic .timer-btn--start,
+    body.theme-basic .timer-display {
+      border-color: #555;
+      color: #1A1A1A;
+    }
+
+    body.theme-basic .timer-display__countdown { color: #1A1A1A; }
+    body.theme-basic .shopping-share__btn { border-color: #555; color: #1A1A1A; }
+
+    body.theme-basic .flow-badge {
+      background: #EEEEEE;
+      color: #333;
+    }
+
+    body.theme-basic .flow-phase-tag,
+    body.theme-basic .flow-legend-item,
+    body.theme-basic .flow-node__cta {
+      color: #555;
+    }
+
+    body.theme-basic .phase-dot { background: #555 !important; }
+
+    body.theme-basic .editor-btn--save {
+      background: #1A1A1A;
+    }
+
+    body.theme-basic .phase-toggle__btn--active,
+    body.theme-basic .shop-subnav__btn--active {
+      background: #1A1A1A;
+      border-color: #1A1A1A;
+    }
+
+    body.theme-basic .cook-tab--active .cook-tab__indicator--running { color: #aaa; }
+    body.theme-basic .cook-tab--active .cook-tab__indicator--done    { color: #ccc; }
+
   </style>
 </head>
 <body>

@@ -214,10 +214,20 @@ function renderStageFields(stage, stageIndex, totalStages) {
     <div class="editor-stage" data-stage-index="${stageIndex}" id="stage-${stageIndex}">
       <div class="editor-stage__header">
         <h3 class="editor-stage__title">Stage ${stageIndex + 1}</h3>
-        ${totalStages > 1
-          ? `<button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
-               data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>`
-          : ""}
+        <div class="editor-stage__controls">
+          <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+            data-stage="${stageIndex}" data-direction="-1"
+            ${stageIndex === 0 ? "disabled" : ""}
+            aria-label="Move stage up">↑</button>
+          <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+            data-stage="${stageIndex}" data-direction="1"
+            ${stageIndex === totalStages - 1 ? "disabled" : ""}
+            aria-label="Move stage down">↓</button>
+          ${totalStages > 1
+            ? `<button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
+                 data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>`
+            : ""}
+        </div>
       </div>
 
       <div class="editor-field">
@@ -496,6 +506,24 @@ export function bindEditorEvents(initialRecipe, onSave, onNavigate) {
     draft = parseFormToRecipe(document.getElementById("editor-form"));
     draft.stages.push(buildEmptyStage(draft.stages.length));
     onNavigate(draft);
+  });
+
+  // ── Move stage ───────────────────────────────────────────────────────────
+  document.querySelectorAll(".move-stage-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const si  = parseInt(btn.dataset.stage, 10);
+      const dir = parseInt(btn.dataset.direction, 10);
+      const target = si + dir;
+      draft = parseFormToRecipe(document.getElementById("editor-form"));
+      if (target < 0 || target >= draft.stages.length) return;
+      // Swap
+      [draft.stages[si], draft.stages[target]] = [draft.stages[target], draft.stages[si]];
+      // Re-label auto-labels
+      draft.stages.forEach((s, i) => {
+        if (/^Stage \d+$/.test(s.label)) s.label = `Stage ${i + 1}`;
+      });
+      onNavigate(draft);
+    });
   });
 
   // ── Remove stage ─────────────────────────────────────────────────────────

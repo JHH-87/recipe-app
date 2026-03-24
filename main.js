@@ -46,6 +46,11 @@ let shopSubMode = "shop"; // shopping sub-mode: 'shop' | 'phase'
 // ─── Bootstrap ────────────────────────────────────────────────────────────────
 
 async function init() {
+  // Apply saved theme before render to avoid flash
+  if (localStorage.getItem("theme") === "basic") {
+    document.body.classList.add("theme-basic");
+  }
+
   try {
     const base = await loadRecipes();
     recipes = mergeRecipes(base, loadUserRecipes());
@@ -89,8 +94,11 @@ function route() {
     }
 
     const mode = getMode(hash);
-    const stepParam = new URLSearchParams((hash.split("?")[1] || "")).get("step");
+    const qs2 = new URLSearchParams((hash.split("?")[1] || ""));
+    const stepParam = qs2.get("step");
+    const subModeParam = qs2.get("submode");
     if (stepParam !== null) currentStep = Math.max(0, parseInt(stepParam, 10) || 0);
+    if (subModeParam) shopSubMode = subModeParam;
     renderDetailView(recipe, mode, root);
     return;
   }
@@ -124,6 +132,7 @@ function route() {
   currentStep   = 0;
   clearActiveTimer();
   root.innerHTML = renderList(getRecipes(recipes));
+  bindThemeToggle(root);
 }
 
 function getMode(hash) {
@@ -151,7 +160,12 @@ function renderList(recipeList) {
   return `
     <header class="page-header">
       <h1 class="page-header__title">Recipes</h1>
-      <a class="sync-btn" href="#/sync" aria-label="Sync &amp; storage settings">⚙</a>
+      <div class="page-header__tools">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle basic format">
+          ${document.body.classList.contains("theme-basic") ? "🎨" : "Aa"}
+        </button>
+        <a class="sync-btn" href="#/sync" aria-label="Sync &amp; storage settings">⚙</a>
+      </div>
     </header>
     <main class="recipe-list">${items}<a class="add-recipe-btn" href="#/editor">+ New recipe</a></main>`;
 }
@@ -183,6 +197,10 @@ function renderDetailView(recipe, mode, root) {
           <span class="serves-label">Serves <strong id="serves-count">${currentServes ?? recipe.serves}</strong></span>
           <button class="serves-btn" data-delta="1" aria-label="Increase serves">+</button>
         </div>
+      </div>
+      <div class="detail-header__actions">
+        <a class="detail-action-btn" href="#/editor/${titleToSlug(recipe.title)}" aria-label="Edit recipe">✏</a>
+        <button class="detail-action-btn detail-action-btn--delete" id="delete-recipe-btn" aria-label="Delete recipe">🗑</button>
       </div>
     </header>
     <nav class="mode-tabs" role="tablist" aria-label="Recipe modes">${tabs}</nav>
@@ -224,6 +242,15 @@ function bindDetailEvents(recipe, scaled, mode, root) {
       currentServes = Math.max(1, (currentServes ?? recipe.serves) + delta);
       renderDetailView(recipe, mode, root);
     });
+  });
+
+  // Delete recipe
+  document.getElementById("delete-recipe-btn")?.addEventListener("click", () => {
+    if (!confirm(`Delete "${recipe.title}"? This cannot be undone.`)) return;
+    deleteUserRecipe(recipe.title);
+    // Remove from in-memory array
+    recipes = recipes.filter((r) => r.title !== recipe.title);
+    window.location.hash = "#/";
   });
 
   // Mode-specific bindings
@@ -286,6 +313,18 @@ function bindEditorPage(recipe, root) {
   );
 }
 
+
+
+// ─── Theme toggle ─────────────────────────────────────────────────────────────
+
+function bindThemeToggle(root) {
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const isBasic = document.body.classList.toggle("theme-basic");
+    localStorage.setItem("theme", isBasic ? "basic" : "default");
+    root.innerHTML = renderList(getRecipes(recipes));
+    bindThemeToggle(root);
+  });
+}
 
 // ─── Sync panel ───────────────────────────────────────────────────────────────
 

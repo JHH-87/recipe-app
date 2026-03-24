@@ -74,7 +74,7 @@ export function renderProcessFlow(recipe, slug) {
     const meta   = PHASE_META[stage.phase] ?? PHASE_META["cook"];
 
     const href = (stage.phase === "day-before" || stage.phase === "mise")
-      ? null  // these phases no longer have a dedicated tab — link to shopping by-phase
+      ? `#/recipe/${slug}?mode=shopping&submode=phase`
       : `#/recipe/${slug}?mode=cook&step=${stage.cookStepIndex}`;
 
     const badge = stage.timing
@@ -94,7 +94,7 @@ export function renderProcessFlow(recipe, slug) {
       ${stage.ingredients.length > 0
         ? `<p class="flow-node__ing-count">${stage.ingredients.length} ingredient${stage.ingredients.length !== 1 ? "s" : ""}</p>`
         : ""}
-      ${href ? `<span class="flow-node__cta">Go to step →</span>` : `<span class="flow-node__cta flow-node__cta--dim">See shopping by phase</span>`}`;
+      <span class="flow-node__cta">${["day-before","mise"].includes(stage.phase) ? "See by-phase shopping →" : "Go to cook step →"}</span>`;
 
     const content = href
       ? `<a class="flow-node__content flow-node__link" href="${escHtml(href)}">${contentInner}</a>`
