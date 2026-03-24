@@ -61,7 +61,7 @@ async function init() {
 
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker
-      .register("/sw.js")
+      .register("sw.js")
       .catch((err) => console.warn("SW registration failed:", err));
   }
 
