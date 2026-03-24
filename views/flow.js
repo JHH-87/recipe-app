@@ -29,7 +29,7 @@ export function buildFlowStages(recipe) {
     const seconds     = parseTimingToSeconds(stage.timing);
     const isLong      = seconds !== null && seconds >= LONG_TASK_THRESHOLD;
     const isOvernight = /overnight|day\s*before|24\s*h/i.test(stage.timing ?? "");
-    const cookStepIndex = stage.phase === "cook" ? cookCounter++ : null;
+    const cookStepIndex = ["cook", "rest", "finish"].includes(stage.phase) ? cookCounter++ : null;
     return {
       label:          stage.label,
       phase:          stage.phase,
@@ -78,8 +78,9 @@ export function renderProcessFlow(recipe, slug) {
     const isLast = i === stages.length - 1;
 
     // Destination href
-    const href = stage.phase === "prep"
-      ? `#/recipe/${slug}?mode=mise`
+    const isShopPhase = stage.phase === "day-before" || stage.phase === "mise";
+    const href = isShopPhase
+      ? `#/recipe/${slug}?mode=shopping&submode=phase`
       : `#/recipe/${slug}?mode=cook&step=${stage.cookStepIndex}`;
 
     const icon  = stageIcon(stage);
@@ -106,7 +107,7 @@ export function renderProcessFlow(recipe, slug) {
           ${stage.ingredients.length > 0
             ? `<p class="flow-node__ing-count">${stage.ingredients.length} ingredient${stage.ingredients.length !== 1 ? "s" : ""}</p>`
             : ""}
-          <span class="flow-node__cta">${stage.phase === "prep" ? "View mise en place" : "Go to step"} →</span>
+          <span class="flow-node__cta">${isShopPhase ? "View shopping list" : "Go to step"} →</span>
         </a>
       </div>`;
   }).join("");
@@ -115,8 +116,11 @@ export function renderProcessFlow(recipe, slug) {
     <div class="flow-view">
       ${summary}
       <div class="flow-legend">
-        <span class="flow-badge flow-badge--prep">Prep</span>
+        <span class="flow-badge flow-badge--day-before">Day before</span>
+        <span class="flow-badge flow-badge--mise">Mise</span>
         <span class="flow-badge flow-badge--cook">Cook</span>
+        <span class="flow-badge flow-badge--rest">Rest</span>
+        <span class="flow-badge flow-badge--finish">Finish</span>
         <span class="flow-long-flag" style="font-size:0.75rem">⏳ = 1hr+</span>
         <span class="flow-long-flag" style="font-size:0.75rem">🌙 = overnight</span>
       </div>

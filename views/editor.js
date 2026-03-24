@@ -214,10 +214,19 @@ function renderStageFields(stage, stageIndex, totalStages) {
     <div class="editor-stage" data-stage-index="${stageIndex}" id="stage-${stageIndex}">
       <div class="editor-stage__header">
         <h3 class="editor-stage__title">Stage ${stageIndex + 1}</h3>
-        ${totalStages > 1
-          ? `<button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
-               data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>`
-          : ""}
+        ${totalStages > 1 ? `
+          <div class="editor-stage__controls">
+            <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+              data-stage="${stageIndex}" data-dir="up"
+              aria-label="Move stage ${stageIndex + 1} up"
+              ${stageIndex === 0 ? "disabled" : ""}>↑</button>
+            <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+              data-stage="${stageIndex}" data-dir="down"
+              aria-label="Move stage ${stageIndex + 1} down"
+              ${stageIndex === totalStages - 1 ? "disabled" : ""}>↓</button>
+            <button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
+              data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>
+          </div>` : ""}
       </div>
 
       <div class="editor-field">
@@ -507,6 +516,19 @@ export function bindEditorEvents(initialRecipe, onSave, onNavigate) {
     draft = parseFormToRecipe(document.getElementById("editor-form"));
     draft.stages.push(buildEmptyStage(draft.stages.length));
     onNavigate(draft);
+  });
+
+  // ── Move stage ───────────────────────────────────────────────────────────
+  document.querySelectorAll(".move-stage-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const si = parseInt(btn.dataset.stage, 10);
+      const dir = btn.dataset.dir;
+      draft = parseFormToRecipe(document.getElementById("editor-form"));
+      const swapWith = dir === "up" ? si - 1 : si + 1;
+      if (swapWith < 0 || swapWith >= draft.stages.length) return;
+      [draft.stages[si], draft.stages[swapWith]] = [draft.stages[swapWith], draft.stages[si]];
+      onNavigate(draft);
+    });
   });
 
   // ── Remove stage ─────────────────────────────────────────────────────────
