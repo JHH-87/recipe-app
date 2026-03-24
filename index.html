@@ -1367,12 +1367,7 @@
     }
 
     /* ── Flow phase tags ─────────────────────────────────────────────────────── */
-    .flow-phase-tag {
-      font-size: 0.68rem;
-      font-weight: 500;
-      color: var(--phase-col, var(--accent));
-      white-space: nowrap;
-    }
+    
 
     .flow-badge {
       display: inline-flex;
@@ -1495,104 +1490,200 @@
       color: var(--accent);
     }
 
-    /* ── Basic / minimal theme ───────────────────────────────────────────────── */
+    
+
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       BASIC / READING FORMAT THEME
+       Inspired by bettermotherfuckingwebsite.com
+       Philosophy: black on white, space, size hierarchy. Zero decoration.
+       ═══════════════════════════════════════════════════════════════════════════ */
+
     body.theme-basic {
-      --bg:           #FFFFFF;
-      --bg-card:      #F8F8F8;
-      --ink:          #1A1A1A;
-      --ink-muted:    #555555;
-      --accent:       #1A1A1A;
-      --accent-light: #EEEEEE;
-      --prep-color:   #333333;
-      --prep-bg:      #EEEEEE;
-      --cook-color:   #1A1A1A;
-      --cook-bg:      #E8E8E8;
-      --border:       #DDDDDD;
-      font-family: 'DM Sans', system-ui, sans-serif;
+      /* Override all colour tokens */
+      --bg:             #FAFAFA;
+      --bg-card:        #FFFFFF;
+      --ink:            #2B2B2B;
+      --ink-muted:      #666666;
+      --accent:         #2B2B2B;
+      --accent-light:   #EEEEEE;
+      --prep-color:     #444444;
+      --prep-bg:        #F0F0F0;
+      --cook-color:     #2B2B2B;
+      --cook-bg:        #EEEEEE;
+      --border:         #DDDDDD;
+
+      /* Better reading typography */
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
-    body.theme-basic .page-header__title,
-    body.theme-basic .detail-header__title,
-    body.theme-basic .recipe-card__title,
-    body.theme-basic .cook-stage-card__title,
+    /* All display/heading fonts → DM Sans */
+    body.theme-basic * {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif !important;
+    }
+
+    /* Heading size ladder — hierarchy through size alone */
+    body.theme-basic .page-header__title     { font-size: 2rem;   font-weight: 700; letter-spacing: -0.03em; }
+    body.theme-basic .detail-header__title   { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
+    body.theme-basic .cook-stage-card__title { font-size: 1.25rem; font-weight: 700; }
+    body.theme-basic .section-heading,
     body.theme-basic .mise-section__heading,
-    body.theme-basic .flow-summary__value,
-    body.theme-basic .flow-node__label,
-    body.theme-basic .editor-stage__title,
-    body.theme-basic .sync-section__heading {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
+    body.theme-basic .shopping-section__heading,
+    body.theme-basic .sync-section__heading  { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #888; }
+    body.theme-basic .recipe-card__title     { font-size: 1.05rem; font-weight: 600; }
+    body.theme-basic .cook-method-text       { font-size: 1.05rem; line-height: 1.8; }
+    body.theme-basic .shopping-row__item     { font-size: 1rem; line-height: 1.6; }
 
-    body.theme-basic .page-header__title    { font-size: 1.6rem; }
-    body.theme-basic .detail-header__title  { font-size: 1.3rem; }
-    body.theme-basic .cook-stage-card__title { font-size: 1.2rem; }
+    /* Flatten dark header/nav surfaces to light grey */
+    body.theme-basic .detail-header   { background: #F0F0F0; color: var(--ink); }
+    body.theme-basic .back-btn,
+    body.theme-basic .detail-action-btn { color: #555; background: transparent; }
+    body.theme-basic .detail-action-btn:hover { background: #E0E0E0; color: #2B2B2B; }
+    body.theme-basic .serves-label    { color: #555; }
+    body.theme-basic .serves-label strong { color: #2B2B2B; }
+    body.theme-basic .serves-btn      { border-color: #BBBBBB; color: #2B2B2B; }
+    body.theme-basic .serves-btn:hover { background: #E0E0E0; }
 
-    body.theme-basic .recipe-card__title { font-size: 1rem; }
+    body.theme-basic .mode-tabs        { background: #F0F0F0; border-bottom: 1px solid #DDD; }
+    body.theme-basic .mode-tab         { color: #888; }
+    body.theme-basic .mode-tab--active { color: #2B2B2B; border-bottom-color: #2B2B2B; }
 
-    /* Flatten colours in basic mode */
-    body.theme-basic .detail-header,
-    body.theme-basic .mode-tabs,
-    body.theme-basic .cook-stage-card__header {
-      background: #1A1A1A;
-    }
+    body.theme-basic .cook-tabs { border-bottom-color: #DDD; }
+    body.theme-basic .cook-tab  { color: #888; background: #FAFAFA; border-color: #DDD; }
+    body.theme-basic .cook-tab--active { background: #2B2B2B; border-color: #2B2B2B; color: #FFF; }
+    body.theme-basic .cook-tab__indicator--running { color: #888; }
+    body.theme-basic .cook-tab__indicator--done    { color: #AAA; }
 
-    body.theme-basic .cook-tab--active {
-      background: #1A1A1A;
-      border-color: #1A1A1A;
-    }
+    body.theme-basic .cook-stage-card__header { background: #2B2B2B; }
+    body.theme-basic .cook-stage-card__step   { color: rgba(255,255,255,0.6); }
+    body.theme-basic .cook-stage-card__timing { color: rgba(255,255,255,0.6); }
+    body.theme-basic .cook-stage__number      { background: #555; }
+    body.theme-basic .cook-ing-row::before    { color: #888; }
 
-    body.theme-basic .recipe-card:hover,
-    body.theme-basic .recipe-card:active {
-      border-color: #1A1A1A;
-    }
+    /* Recipe cards */
+    body.theme-basic .recipe-card { border-color: #DDD; }
+    body.theme-basic .recipe-card:hover { border-color: #2B2B2B; }
+    body.theme-basic .recipe-card__arrow { color: #888; }
+    body.theme-basic .recipe-card__meta  { color: #888; }
 
-    body.theme-basic .add-recipe-btn:hover,
+    /* Check icons */
+    body.theme-basic .check-icon { border-color: #CCC; }
+    body.theme-basic .shopping-row__check[aria-pressed="true"] .check-icon { background: #2B2B2B; border-color: #2B2B2B; }
+
+    /* Sub-nav */
+    body.theme-basic .shop-subnav__btn--active { background: #2B2B2B; border-color: #2B2B2B; }
+
+    /* Buttons */
+    body.theme-basic .add-recipe-btn:hover          { border-color: #2B2B2B; color: #2B2B2B; }
+    body.theme-basic .shopping-share__btn           { border-color: #AAA; color: #2B2B2B; }
+    body.theme-basic .shopping-share__btn:hover     { background: #EEE; }
+    body.theme-basic .editor-btn--save              { background: #2B2B2B; }
     body.theme-basic .editor-btn--add-stage:hover,
-    body.theme-basic .editor-btn--add-ing:hover {
-      border-color: #1A1A1A;
-      color: #1A1A1A;
-    }
+    body.theme-basic .editor-btn--add-ing:hover     { border-color: #2B2B2B; color: #2B2B2B; }
+    body.theme-basic .editor-btn--move:not(:disabled):hover { border-color: #2B2B2B; color: #2B2B2B; }
 
-    body.theme-basic .cook-stage__number {
-      background: #1A1A1A;
-    }
+    /* Timer */
+    body.theme-basic .timer-btn--start  { border-color: #AAA; color: #2B2B2B; }
+    body.theme-basic .timer-btn--start:hover { background: #EEE; }
+    body.theme-basic .timer-display     { background: #EEE; border-color: #AAA; }
+    body.theme-basic .timer-display__countdown { color: #2B2B2B; }
+    body.theme-basic .timer-btn--stop   { border-color: #AAA; color: #555; }
 
-    body.theme-basic .timer-btn--start,
-    body.theme-basic .timer-display {
-      border-color: #555;
-      color: #1A1A1A;
-    }
+    /* Flow */
+    body.theme-basic .flow-summary      { background: #2B2B2B; }
+    body.theme-basic .flow-node__dot    { background: #EEE !important; color: #555 !important; }
+    body.theme-basic .flow-node__line   { background: #DDD !important; }
+    body.theme-basic .flow-badge        { background: #EEE !important; color: #555 !important; }
+    body.theme-basic .flow-phase-tag    { color: #888 !important; }
+    body.theme-basic .flow-legend-item  { color: #888 !important; }
+    body.theme-basic .flow-node__cta    { color: #555; }
+    body.theme-basic .flow-node__link:hover { border-color: #2B2B2B; }
 
-    body.theme-basic .timer-display__countdown { color: #1A1A1A; }
-    body.theme-basic .shopping-share__btn { border-color: #555; color: #1A1A1A; }
+    /* Phase badges */
+    body.theme-basic .phase-dot              { background: #888 !important; }
+    body.theme-basic .flow-node__content     { border-color: #DDD; }
 
-    body.theme-basic .flow-badge {
-      background: #EEEEEE;
-      color: #333;
-    }
+    /* Phase select in editor */
+    body.theme-basic .editor-select--phase   { border-color: #CCC; }
 
-    body.theme-basic .flow-phase-tag,
-    body.theme-basic .flow-legend-item,
-    body.theme-basic .flow-node__cta {
-      color: #555;
-    }
+    /* Sync panel */
+    body.theme-basic .sync-action-btn:hover:not(:disabled) { border-color: #2B2B2B; color: #2B2B2B; }
 
-    body.theme-basic .phase-dot { background: #555 !important; }
+    /* Stub notice */
+    body.theme-basic .stub-notice { background: #F0F0F0; border-color: #CCC; }
 
-    body.theme-basic .editor-btn--save {
-      background: #1A1A1A;
-    }
+    /* ── Better reading spacing in basic mode ────────────────────────────────── */
+    body.theme-basic .detail-content   { padding: 24px 20px 60px; }
+    body.theme-basic .cook-method-text { padding: 4px 0; }
+    body.theme-basic .shopping-row     { min-height: 56px; }
+    body.theme-basic .ingredient-row   { min-height: 56px; }
+    body.theme-basic .recipe-list      { gap: 10px; }
 
-    body.theme-basic .phase-toggle__btn--active,
-    body.theme-basic .shop-subnav__btn--active {
-      background: #1A1A1A;
-      border-color: #1A1A1A;
-    }
 
-    body.theme-basic .cook-tab--active .cook-tab__indicator--running { color: #aaa; }
-    body.theme-basic .cook-tab--active .cook-tab__indicator--done    { color: #ccc; }
+    /* ── Flow phase colours (class-based, no inline styles) ─────────────────── */
+    /* Default theme — full colour palette */
+    .flow-node__dot--day-before { background: #3B5BA520; color: #3B5BA5; }
+    .flow-node__dot--mise       { background: #64748B20; color: #64748B; }
+    .flow-node__dot--cook       { background: #C4622D20; color: #C4622D; }
+    .flow-node__dot--rest       { background: #B4530920; color: #B45309; }
+    .flow-node__dot--finish     { background: #5C7A5C20; color: #5C7A5C; }
+
+    .flow-node__line--day-before { background: #3B5BA540; }
+    .flow-node__line--mise       { background: #64748B40; }
+    .flow-node__line--cook       { background: #C4622D40; }
+    .flow-node__line--rest       { background: #B4530940; }
+    .flow-node__line--finish     { background: #5C7A5C40; }
+
+    .flow-badge--day-before { background: #3B5BA515; color: #3B5BA5; }
+    .flow-badge--mise       { background: #64748B15; color: #64748B; }
+    .flow-badge--cook       { background: #C4622D15; color: #C4622D; }
+    .flow-badge--rest       { background: #B4530915; color: #B45309; }
+    .flow-badge--finish     { background: #5C7A5C15; color: #5C7A5C; }
+
+    .flow-phase-tag--day-before { color: #3B5BA5; }
+    .flow-phase-tag--mise       { color: #64748B; }
+    .flow-phase-tag--cook       { color: #C4622D; }
+    .flow-phase-tag--rest       { color: #B45309; }
+    .flow-phase-tag--finish     { color: #5C7A5C; }
+
+    .flow-legend-item--day-before { color: #3B5BA5; }
+    .flow-legend-item--mise       { color: #64748B; }
+    .flow-legend-item--cook       { color: #C4622D; }
+    .flow-legend-item--rest       { color: #B45309; }
+    .flow-legend-item--finish     { color: #5C7A5C; }
+
+    /* Basic theme overrides — all phases → grey */
+    body.theme-basic .flow-node__dot--day-before,
+    body.theme-basic .flow-node__dot--mise,
+    body.theme-basic .flow-node__dot--cook,
+    body.theme-basic .flow-node__dot--rest,
+    body.theme-basic .flow-node__dot--finish     { background: #EEEEEE; color: #555; }
+
+    body.theme-basic .flow-node__line--day-before,
+    body.theme-basic .flow-node__line--mise,
+    body.theme-basic .flow-node__line--cook,
+    body.theme-basic .flow-node__line--rest,
+    body.theme-basic .flow-node__line--finish     { background: #DDDDDD; }
+
+    body.theme-basic .flow-badge--day-before,
+    body.theme-basic .flow-badge--mise,
+    body.theme-basic .flow-badge--cook,
+    body.theme-basic .flow-badge--rest,
+    body.theme-basic .flow-badge--finish          { background: #EEEEEE; color: #555; }
+
+    body.theme-basic .flow-phase-tag--day-before,
+    body.theme-basic .flow-phase-tag--mise,
+    body.theme-basic .flow-phase-tag--cook,
+    body.theme-basic .flow-phase-tag--rest,
+    body.theme-basic .flow-phase-tag--finish      { color: #888; }
+
+    body.theme-basic .flow-legend-item--day-before,
+    body.theme-basic .flow-legend-item--mise,
+    body.theme-basic .flow-legend-item--cook,
+    body.theme-basic .flow-legend-item--rest,
+    body.theme-basic .flow-legend-item--finish     { color: #888; }
 
   </style>
 </head>

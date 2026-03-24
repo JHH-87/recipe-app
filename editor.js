@@ -215,18 +215,18 @@ function renderStageFields(stage, stageIndex, totalStages) {
       <div class="editor-stage__header">
         <h3 class="editor-stage__title">Stage ${stageIndex + 1}</h3>
         <div class="editor-stage__controls">
-          <button type="button" class="editor-btn editor-btn--move move-stage-btn"
-            data-stage="${stageIndex}" data-direction="-1"
-            ${stageIndex === 0 ? "disabled" : ""}
-            aria-label="Move stage up">↑</button>
-          <button type="button" class="editor-btn editor-btn--move move-stage-btn"
-            data-stage="${stageIndex}" data-direction="1"
-            ${stageIndex === totalStages - 1 ? "disabled" : ""}
-            aria-label="Move stage down">↓</button>
-          ${totalStages > 1
-            ? `<button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
-                 data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>`
-            : ""}
+          ${totalStages > 1 ? `
+            <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+              data-stage="${stageIndex}" data-direction="-1"
+              ${stageIndex === 0 ? "disabled" : ""}
+              aria-label="Move stage up">↑</button>
+            <button type="button" class="editor-btn editor-btn--move move-stage-btn"
+              data-stage="${stageIndex}" data-direction="1"
+              ${stageIndex === totalStages - 1 ? "disabled" : ""}
+              aria-label="Move stage down">↓</button>
+            <button type="button" class="editor-btn editor-btn--remove remove-stage-btn"
+              data-stage="${stageIndex}" aria-label="Remove stage ${stageIndex + 1}">Remove</button>
+          ` : ""}
         </div>
       </div>
 

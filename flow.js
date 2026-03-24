@@ -66,7 +66,7 @@ export function renderProcessFlow(recipe, slug) {
   const legend = Object.entries(PHASE_META).map(([phase, meta]) => {
     const hasPhase = stages.some((s) => s.phase === phase);
     if (!hasPhase) return "";
-    return `<span class="flow-legend-item" style="--phase-col:${meta.colour}">${meta.icon} ${meta.label}</span>`;
+    return `<span class="flow-legend-item flow-legend-item--${phase}">${meta.icon} ${meta.label}</span>`;
   }).join("");
 
   const nodes = stages.map((stage, i) => {
@@ -78,7 +78,7 @@ export function renderProcessFlow(recipe, slug) {
       : `#/recipe/${slug}?mode=cook&step=${stage.cookStepIndex}`;
 
     const badge = stage.timing
-      ? `<span class="flow-badge" style="--phase-col:${meta.colour}">${escHtml(stage.timing)}</span>`
+      ? `<span class="flow-badge flow-badge--${stage.phase}">${escHtml(stage.timing)}</span>`
       : "";
     const longFlag = stage.isLong || stage.isOvernight
       ? `<span class="flow-long-flag">${stage.isOvernight ? "🌙 Day before" : "⏳ Long"}</span>` : "";
@@ -86,7 +86,7 @@ export function renderProcessFlow(recipe, slug) {
     const contentInner = `
       <div class="flow-node__header">
         <span class="flow-node__label">${escHtml(stage.label)}</span>
-        <span class="flow-phase-tag" style="--phase-col:${meta.colour}">${meta.icon} ${meta.label}</span>
+        <span class="flow-phase-tag flow-phase-tag--${stage.phase}">${meta.icon} ${meta.label}</span>
         ${badge}
         ${longFlag}
       </div>
@@ -97,14 +97,14 @@ export function renderProcessFlow(recipe, slug) {
       <span class="flow-node__cta">${["day-before","mise"].includes(stage.phase) ? "See by-phase shopping →" : "Go to cook step →"}</span>`;
 
     const content = href
-      ? `<a class="flow-node__content flow-node__link" href="${escHtml(href)}">${contentInner}</a>`
+      ? `<a class="flow-node__content flow-node__link" href="${href}">${contentInner}</a>`
       : `<div class="flow-node__content">${contentInner}</div>`;
 
     return `
       <div class="flow-node${stage.isLong || stage.isOvernight ? " flow-node--long" : ""}">
         <div class="flow-node__icon-col">
-          <div class="flow-node__dot" style="background:${meta.colour}20;color:${meta.colour}">${meta.icon}</div>
-          ${!isLast ? `<div class="flow-node__line" style="background:${meta.colour}40"></div>` : ""}
+          <div class="flow-node__dot flow-node__dot--${stage.phase}">${meta.icon}</div>
+          ${!isLast ? `<div class="flow-node__line flow-node__line--${stage.phase}"></div>` : ""}
         </div>
         ${content}
       </div>`;
