@@ -1623,6 +1623,53 @@
     body.theme-basic .ingredient-row   { min-height: 56px; }
     body.theme-basic .recipe-list      { gap: 10px; }
 
+    /* ── Strip all decorative chrome (bettermotherfuckingwebsite.com style) ─── */
+    /* No shadows anywhere */
+    body.theme-basic * { box-shadow: none !important; }
+
+    /* Flatten recipe cards → plain text links */
+    body.theme-basic .recipe-card {
+      border: none;
+      border-bottom: 1px solid #E0E0E0;
+      border-radius: 0;
+      padding: 14px 0;
+      background: transparent;
+    }
+    body.theme-basic .recipe-card-wrapper { border-radius: 0; }
+    body.theme-basic .recipe-card__arrow  { display: none; }
+
+    /* Flatten cook stage cards */
+    body.theme-basic .cook-stage-card {
+      border: none;
+      border-radius: 0;
+      background: transparent;
+    }
+    body.theme-basic .cook-stage-card__header {
+      border-radius: 0;
+      padding: 0 0 8px 0;
+    }
+    body.theme-basic .cook-stage-card__method { padding: 0; }
+    body.theme-basic .cook-stage-card__ingredients { border-bottom: 1px solid #E0E0E0; padding: 12px 0; }
+
+    /* Flatten flow nodes */
+    body.theme-basic .flow-node__content {
+      border-radius: 0;
+      border-color: #E0E0E0;
+    }
+    body.theme-basic .flow-summary { border-radius: 0; }
+
+    /* Flatten tab nav */
+    body.theme-basic .mode-tabs  { border-radius: 0; }
+    body.theme-basic .cook-tabs  { border-radius: 0; }
+    body.theme-basic .cook-tab   { border-radius: 0; }
+
+    /* Flatten timer */
+    body.theme-basic .timer-btn--start,
+    body.theme-basic .timer-display { border-radius: 0; background: #F5F5F5; }
+
+    /* Flatten detail header */
+    body.theme-basic .detail-header { border-radius: 0; }
+
 
     /* ── Flow phase colours (class-based, no inline styles) ─────────────────── */
     /* Default theme — full colour palette */

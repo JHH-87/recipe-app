@@ -24,7 +24,7 @@ import {
 
 import { renderShoppingList, bindShoppingEvents } from "./views/shopping.js";
 import { renderCookView, bindCookEvents, clearActiveTimer } from "./views/cook.js";
-import { renderEditorForm, bindEditorEvents, buildEmptyRecipe, loadUserRecipes, mergeRecipes } from "./views/editor.js";
+import { renderEditorForm, bindEditorEvents, buildEmptyRecipe, loadUserRecipes, mergeRecipes, deleteUserRecipe } from "./views/editor.js";
 import { renderProcessFlow } from "./views/flow.js";
 import {
   hasFileSystemAccess,
