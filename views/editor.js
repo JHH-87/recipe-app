@@ -71,7 +71,7 @@ export function buildEmptyIngredient() {
 
 // ─── Validation ───────────────────────────────────────────────────────────────
 
-const VALID_PHASES    = ["prep", "cook"];
+const VALID_PHASES = ["day-before", "mise", "cook", "rest", "finish"];
 const VALID_CATEGORIES = CATEGORIES;
 
 /**
@@ -104,7 +104,7 @@ export function validateRecipe(recipe) {
       }
 
       if (!VALID_PHASES.includes(stage.phase)) {
-        errors.push(`${prefix}: phase must be "prep" or "cook".`);
+        errors.push(`${prefix}: phase must be one of: ${VALID_PHASES.join(", ")}.`);
       }
 
       if (!stage.method || !stage.method.trim()) {
@@ -245,16 +245,18 @@ function renderStageFields(stage, stageIndex, totalStages) {
         <div class="editor-field">
           <label class="editor-label">Phase</label>
           <div class="phase-toggle">
-            <button type="button"
-              class="phase-toggle__btn ${stage.phase === "prep" ? "phase-toggle__btn--active" : ""}"
-              data-stage="${stageIndex}" data-phase="prep">
-              Prep
-            </button>
-            <button type="button"
-              class="phase-toggle__btn ${stage.phase === "cook" ? "phase-toggle__btn--active" : ""}"
-              data-stage="${stageIndex}" data-phase="cook">
-              Cook
-            </button>
+            ${[
+              ["day-before", "Day before"],
+              ["mise",       "Mise"],
+              ["cook",       "Cook"],
+              ["rest",       "Rest"],
+              ["finish",     "Finish"],
+            ].map(([val, label]) => `
+              <button type="button"
+                class="phase-toggle__btn ${stage.phase === val ? "phase-toggle__btn--active" : ""}"
+                data-stage="${stageIndex}" data-phase="${val}">
+                ${label}
+              </button>`).join("")}
           </div>
           <input type="hidden" name="stage[${stageIndex}][phase]" value="${escHtml(stage.phase)}" />
         </div>
