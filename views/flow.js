@@ -2,8 +2,7 @@
  * views/flow.js
  *
  * Process flow view — visual timeline of all recipe stages.
- * Each node is a link: prep stages navigate to the Mise tab,
- * cook stages navigate to the Cook tab at the correct step.
+ * Each node is a link: all stages navigate to the Detail tab at the correct step.
  *
  * Exported pure functions:
  *   buildFlowStages(recipe)            → Array<flowStage>
@@ -18,7 +17,7 @@ const LONG_TASK_THRESHOLD = 3600; // 1 hour
 
 /**
  * Build enriched stage descriptors.
- * cookStepIndex is the 0-based index within cook-only stages (null for prep).
+ * cookStepIndex is the 0-based index within all stages.
  *
  * @param {object} recipe
  * @returns {Array<object>}
@@ -29,7 +28,7 @@ export function buildFlowStages(recipe) {
     const seconds     = parseTimingToSeconds(stage.timing);
     const isLong      = seconds !== null && seconds >= LONG_TASK_THRESHOLD;
     const isOvernight = /overnight|day\s*before|24\s*h/i.test(stage.timing ?? "");
-    const cookStepIndex = ["cook", "rest", "finish"].includes(stage.phase) ? cookCounter++ : null;
+    const cookStepIndex = cookCounter++;
     return {
       label:          stage.label,
       phase:          stage.phase,
@@ -78,10 +77,7 @@ export function renderProcessFlow(recipe, slug) {
     const isLast = i === stages.length - 1;
 
     // Destination href
-    const isShopPhase = stage.phase === "day-before" || stage.phase === "mise";
-    const href = isShopPhase
-      ? `#/recipe/${slug}?mode=shopping&submode=phase`
-      : `#/recipe/${slug}?mode=cook&step=${stage.cookStepIndex}`;
+    const href = `#/recipe/${slug}?mode=detail&step=${stage.cookStepIndex}`;
 
     const icon  = stageIcon(stage);
     const badge = stage.timing
@@ -107,7 +103,7 @@ export function renderProcessFlow(recipe, slug) {
           ${stage.ingredients.length > 0
             ? `<p class="flow-node__ing-count">${stage.ingredients.length} ingredient${stage.ingredients.length !== 1 ? "s" : ""}</p>`
             : ""}
-          <span class="flow-node__cta">${isShopPhase ? "View shopping list" : "Go to step"} →</span>
+          <span class="flow-node__cta">Go to step →</span>
         </a>
       </div>`;
   }).join("");
@@ -117,7 +113,7 @@ export function renderProcessFlow(recipe, slug) {
       ${summary}
       <div class="flow-legend">
         <span class="flow-badge flow-badge--day-before">Day before</span>
-        <span class="flow-badge flow-badge--mise">Mise</span>
+        <span class="flow-badge flow-badge--prep">Prep</span>
         <span class="flow-badge flow-badge--cook">Cook</span>
         <span class="flow-badge flow-badge--rest">Rest</span>
         <span class="flow-badge flow-badge--finish">Finish</span>

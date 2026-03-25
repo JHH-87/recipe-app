@@ -20,10 +20,10 @@
 
 // ─── Phase config ──────────────────────────────────────────────────────────────
 
-export const PHASE_ORDER  = ["day-before", "mise", "cook", "rest", "finish"];
+export const PHASE_ORDER  = ["day-before", "prep", "cook", "rest", "finish"];
 export const PHASE_LABELS = {
   "day-before": "Day before",
-  "mise":       "Mise en place",
+  "prep":       "Prep",
   "cook":       "Cook",
   "rest":       "Rest & set",
   "finish":     "Finish & plate",

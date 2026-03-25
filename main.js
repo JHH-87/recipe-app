@@ -178,7 +178,7 @@ function renderDetailView(recipe, mode, root) {
     servesMultiplier(recipe, currentServes ?? recipe.serves)
   );
 
-  const tabs = ["shopping", "cook", "flow"].map((m) => `
+  const tabs = ["shopping", "detail", "flow"].map((m) => `
     <button
       class="mode-tab ${m === mode ? "mode-tab--active" : ""}"
       data-mode="${m}"
@@ -210,7 +210,7 @@ function renderDetailView(recipe, mode, root) {
 }
 
 function tabLabel(mode) {
-  return { shopping: "Shopping", cook: "Cook", flow: "Flow" }[mode];
+  return { shopping: "Shopping", detail: "Detail", flow: "Flow" }[mode];
 }
 
 // ─── Mode panel ───────────────────────────────────────────────────────────────
@@ -218,7 +218,7 @@ function tabLabel(mode) {
 function renderModePanel(scaledRecipe, mode) {
   switch (mode) {
     case "shopping": return renderShoppingList(scaledRecipe, shopSubMode);
-    case "cook":     return renderCookView(scaledRecipe, currentStep);
+    case "detail":   return renderCookView(scaledRecipe, currentStep);
     case "flow":     return renderProcessFlow(scaledRecipe, currentSlug);
     default:         return renderShoppingList(scaledRecipe);
   }
@@ -261,7 +261,7 @@ function bindDetailEvents(recipe, scaled, mode, root) {
     });
   }
 
-  if (mode === "cook") {
+  if (mode === "detail") {
     bindCookEvents(recipe, currentStep, (newStep) => {
       currentStep = newStep;
       renderDetailView(recipe, mode, root);

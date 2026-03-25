@@ -71,7 +71,7 @@ export function buildEmptyIngredient() {
 
 // ─── Validation ───────────────────────────────────────────────────────────────
 
-const VALID_PHASES = ["day-before", "mise", "cook", "rest", "finish"];
+const VALID_PHASES = ["day-before", "prep", "cook", "rest", "finish"];
 const VALID_CATEGORIES = CATEGORIES;
 
 /**
@@ -247,7 +247,7 @@ function renderStageFields(stage, stageIndex, totalStages) {
           <div class="phase-toggle">
             ${[
               ["day-before", "Day before"],
-              ["mise",       "Mise"],
+              ["prep",       "Prep"],
               ["cook",       "Cook"],
               ["rest",       "Rest"],
               ["finish",     "Finish"],
