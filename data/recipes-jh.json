@@ -1,0 +1,760 @@
+[
+  {
+    "title": "Spaghetti Aglio e Olio",
+    "serves": 2,
+    "notes": "The simplest pasta dish. Quality of olive oil matters here.",
+    "stages": [
+      {
+        "label": "Pasta",
+        "phase": "cook",
+        "timing": "10 minutes",
+        "ingredients": [
+          { "item": "200g spaghetti", "prep": null, "category": "dry-goods" },
+          { "item": "1 tsp salt", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Bring a large pan of water to a rolling boil. Add salt and cook spaghetti until al dente per packet instructions. Reserve 100ml pasta water before draining."
+      },
+      {
+        "label": "Oil and garlic",
+        "phase": "cook",
+        "timing": "5 minutes",
+        "ingredients": [
+          { "item": "6 tbsp extra virgin olive oil", "prep": null, "category": "store-cupboard" },
+          { "item": "4 cloves garlic", "prep": null, "category": "produce" },
+          { "item": "1 tsp dried chilli flakes", "prep": null, "category": "store-cupboard" },
+          { "item": "Small bunch flat-leaf parsley", "prep": null, "category": "produce" }
+        ],
+        "method": "While pasta cooks, warm oil in a wide pan over low heat. Add garlic and chilli and cook gently until garlic is golden but not brown, about 3 minutes. Add drained pasta, a splash of pasta water, and parsley. Toss vigorously to emulsify. Serve immediately."
+      }
+    ]
+  },
+  {
+    "title": "Chicken Tikka Masala",
+    "serves": 4,
+    "notes": "Marinating overnight gives the best result. The tikka (charring) step is optional but adds depth.",
+    "stages": [
+      {
+        "label": "Marinade",
+        "phase": "day-before",
+        "timing": "at least 4 hours, ideally overnight",
+        "ingredients": [
+          { "item": "800g boneless chicken thighs", "prep": "cut into 4cm chunks", "category": "meat" },
+          { "item": "150ml full-fat yoghurt", "prep": null, "category": "dairy" },
+          { "item": "2 tbsp lemon juice", "prep": null, "category": "produce" },
+          { "item": "3 cloves garlic", "prep": "grate to paste", "category": "produce" },
+          { "item": "20g fresh ginger", "prep": "grate to paste", "category": "produce" },
+          { "item": "1 tsp ground cumin", "prep": null, "category": "spices" },
+          { "item": "1 tsp ground coriander", "prep": null, "category": "spices" },
+          { "item": "1 tsp hot smoked paprika", "prep": null, "category": "spices" },
+          { "item": "1 tsp garam masala", "prep": null, "category": "spices" },
+          { "item": "1 tsp turmeric", "prep": null, "category": "spices" },
+          { "item": "1 tsp salt", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Combine all marinade ingredients in a large bowl. Add chicken and coat thoroughly. Cover and refrigerate for at least 4 hours, overnight if possible."
+      },
+      {
+        "label": "Base aromatics",
+        "phase": "cook",
+        "timing": "15 minutes",
+        "ingredients": [
+          { "item": "2 tbsp neutral oil", "prep": null, "category": "store-cupboard" },
+          { "item": "2 medium onions", "prep": "finely dice", "category": "produce" },
+          { "item": "3 cloves garlic", "prep": "grate to paste", "category": "produce" },
+          { "item": "25g fresh ginger", "prep": "grate to paste", "category": "produce" },
+          { "item": "1 tsp cumin seeds", "prep": null, "category": "spices" },
+          { "item": "2 cardamom pods", "prep": "lightly crush", "category": "spices" }
+        ],
+        "method": "Heat oil in a large heavy-based pan over medium heat. Add cumin seeds and cardamom; fry 30 seconds until fragrant. Add onion and cook, stirring occasionally, until deep golden — about 12 minutes. Add garlic and ginger paste and cook a further 2 minutes."
+      },
+      {
+        "label": "Sauce",
+        "phase": "cook",
+        "timing": "25 minutes",
+        "ingredients": [
+          { "item": "400g tin chopped tomatoes", "prep": null, "category": "store-cupboard" },
+          { "item": "1 tsp ground coriander", "prep": null, "category": "spices" },
+          { "item": "1 tsp garam masala", "prep": null, "category": "spices" },
+          { "item": "1 tsp hot smoked paprika", "prep": null, "category": "spices" },
+          { "item": "1 tsp sugar", "prep": null, "category": "store-cupboard" },
+          { "item": "200ml double cream", "prep": null, "category": "dairy" },
+          { "item": "Salt to taste", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Add ground spices to the onion base and fry 1 minute. Add tomatoes and sugar. Simmer uncovered for 15 minutes until sauce thickens and oil separates at the edges. Blend smooth if preferred. Stir in cream and simmer a further 5 minutes. Season."
+      },
+      {
+        "label": "Cook and combine chicken",
+        "phase": "finish",
+        "timing": "15 minutes",
+        "ingredients": [
+          { "item": "Small bunch fresh coriander", "prep": "roughly chop", "category": "produce" }
+        ],
+        "method": "Remove chicken from marinade. Either grill under a high broiler for 8–10 minutes, turning once, until lightly charred; or fry in batches in a hot oiled pan. Add cooked chicken to the sauce and simmer together for 5 minutes. Finish with fresh coriander."
+      }
+    ]
+  },
+  {
+    "title": "Focaccia",
+    "serves": 8,
+    "notes": "Makes one large tray. Scale for the tin size — this is written for a 30x40cm roasting tin.",
+    "stages": [
+      {
+        "label": "Dough",
+        "phase": "day-before",
+        "timing": "overnight cold prove, or 2 hours at room temperature",
+        "ingredients": [
+          { "item": "500g strong white bread flour", "prep": null, "category": "dry-goods" },
+          { "item": "7g instant yeast", "prep": null, "category": "dry-goods" },
+          { "item": "10g fine salt", "prep": null, "category": "store-cupboard" },
+          { "item": "350ml warm water", "prep": null, "category": "other" },
+          { "item": "4 tbsp extra virgin olive oil", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Combine flour, yeast and salt in a large bowl. Add water and 2 tbsp of the oil. Mix to a rough dough then knead for 10 minutes until smooth and elastic. Oil the bowl, return dough, cover and refrigerate overnight or leave at room temperature for 2 hours until doubled."
+      },
+      {
+        "label": "Tray and toppings",
+        "phase": "prep",
+        "timing": "30 minutes before baking",
+        "ingredients": [
+          { "item": "4 tbsp extra virgin olive oil", "prep": null, "category": "store-cupboard" },
+          { "item": "Flaky sea salt", "prep": null, "category": "store-cupboard" },
+          { "item": "4 sprigs fresh rosemary", "prep": "pick leaves", "category": "produce" },
+          { "item": "10 cherry tomatoes", "prep": "halve", "category": "produce" }
+        ],
+        "method": "Pour 2 tbsp oil into the roasting tin and spread. Tip in the dough and stretch gently to fill the tin. Drizzle remaining oil over the top. Leave to prove 30 minutes until puffed. Dimple aggressively with fingers. Press tomatoes and rosemary into the dimples. Scatter flaky salt."
+      },
+      {
+        "label": "Bake",
+        "phase": "cook",
+        "timing": "25 minutes",
+        "ingredients": [],
+        "method": "Preheat oven to 220°C fan. Bake for 20–25 minutes until deep golden on top and pulling away from the edges. Cool in the tin for 10 minutes before cutting."
+      }
+    ]
+  },
+  {
+    "title": "White Loaf",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Mix & knead",
+        "phase": "prep",
+        "ingredients": [
+          { "item": "500g strong white flour, plus extra for kneading", "prep": null, "category": "dry-goods" },
+          { "item": "10g salt", "prep": null, "category": "store-cupboard" },
+          { "item": "1 x 7g sachet instant yeast", "prep": null, "category": "dry-goods" },
+          { "item": "320ml cold water", "prep": null, "category": "store-cupboard" },
+          { "item": "40ml olive oil, plus extra for kneading", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Place the dry ingredients in a bowl (salt and yeast not touching). Add the oil and 240ml of water. Manually mix together, gradually adding remaining water until incorporated into a soft rough dough. Knead until smooth and silky. Place into a clean oiled bowl, cover and leave in a warm place until tripled in size."
+      },
+      {
+        "label": "Shape & first prove",
+        "phase": "rest",
+        "ingredients": [],
+        "method": "Knock the dough back by folding it in on itself repeatedly. Flatten into a rectangle, fold each end into the middle, then gently roll into a Swiss roll shape with a smooth top and seam along the base. Place onto parchment/tin, cover and leave to prove for 1–2 hours until doubled in size."
+      },
+      {
+        "label": "Bake",
+        "phase": "cook",
+        "timing": "35 minutes",
+        "ingredients": [],
+        "method": "At end of hour 1, preheat oven to 220°C/425°F/Gas 7 and place a baking tray of water on the bottom shelf. Lightly spray loaf with water and dust with flour. Make four diagonal slashes with a sharp knife. Bake for 25 minutes then lower heat to 200°C and bake a further 10 minutes. Cool on a wire rack."
+      }
+    ]
+  },
+  {
+    "title": "Milk Bread",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Dough & first prove",
+        "phase": "prep",
+        "timing": "1–2 hours",
+        "ingredients": [
+          { "item": "160ml heavy cream, room temperature", "prep": null, "category": "dairy" },
+          { "item": "250ml milk, room temperature", "prep": null, "category": "dairy" },
+          { "item": "1 large egg, room temperature", "prep": null, "category": "dairy" },
+          { "item": "75g sugar", "prep": null, "category": "dry-goods" },
+          { "item": "570g all-purpose flour", "prep": null, "category": "dry-goods" },
+          { "item": "1 tbsp active dry yeast (or instant yeast)", "prep": null, "category": "dry-goods" },
+          { "item": "7g salt", "prep": null, "category": "store-cupboard" },
+          { "item": "1 egg for egg wash (beat with 1 tsp water)", "prep": null, "category": "dairy" },
+          { "item": "Simple syrup (1 tbsp sugar dissolved in 1 tbsp hot water)", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "In stand mixer with dough hook: add heavy cream, milk, egg, sugar, flour, yeast, and salt in that order. Mix on 'stir' for 15 minutes, adding flour 1 tbsp at a time if dough sticks to sides (it should stick to the bottom but not the sides). Cover with a damp towel and prove in a warm spot until doubled, 1–2 hours."
+      },
+      {
+        "label": "Shape & second prove",
+        "phase": "rest",
+        "timing": "1 hour",
+        "ingredients": [],
+        "method": "Grease two baking vessels with butter. Return proved dough to mixer and stir 5 minutes to knock back air. Tip onto lightly floured surface, cut in half and shape. For loaves: form a rectangle, cut cross-wise into 3 pieces and place in loaf pan. For rolls: cut each half into 8 and roll into balls for a round pan. Cover and prove 1 hour. Preheat oven to 175°C."
+      },
+      {
+        "label": "Bake & glaze",
+        "phase": "cook",
+        "timing": "25 minutes",
+        "ingredients": [],
+        "method": "Brush risen dough with egg wash. Bake for 23–25 minutes until golden brown. Remove from oven and immediately brush with simple syrup to give shine and sweetness."
+      }
+    ]
+  },
+  {
+    "title": "Braised Red Chinese Pork Belly (红烧肉)",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Blanch",
+        "phase": "cook",
+        "ingredients": [
+          { "item": "500g skin-on pork belly, sliced into 3cm chunks", "prep": null, "category": "meat" },
+          { "item": "1 large knob of ginger, thinly sliced", "prep": null, "category": "produce" },
+          { "item": "3 spring onions, cut into thirds", "prep": null, "category": "produce" }
+        ],
+        "method": "Add a few knobs of ginger and spring onion pieces to a pot of boiling water. Add a pinch of salt and the pork slices. Cook on high heat for 2–3 mins, then remove with a slotted spoon. Set aside. Discard the blanching liquid."
+      },
+      {
+        "label": "Render fat",
+        "phase": "cook",
+        "ingredients": [],
+        "method": "Heat a large saucepan on medium heat and add the blanched pork. Cook for 10–15 mins until most of the fat has rendered. Remove pork with a slotted spoon. Pour the pork fat into a small bowl and set aside."
+      },
+      {
+        "label": "Caramelise & braise",
+        "phase": "cook",
+        "timing": "45–60 minutes",
+        "ingredients": [
+          { "item": "2 bay leaves", "prep": null, "category": "spices" },
+          { "item": "2 star anise", "prep": null, "category": "spices" },
+          { "item": "1–2 tbsp light soy sauce", "prep": null, "category": "store-cupboard" },
+          { "item": "1 tbsp dark soy sauce", "prep": null, "category": "store-cupboard" },
+          { "item": "1 generous splash Shaoxing wine", "prep": null, "category": "store-cupboard" },
+          { "item": "440ml light beer (1 large can)", "prep": null, "category": "store-cupboard" },
+          { "item": "35g rock sugar (or caster sugar)", "prep": null, "category": "dry-goods" },
+          { "item": "Bok choi", "prep": null, "category": "produce" }
+        ],
+        "method": "Reheat saucepan with 1 tbsp pork fat. Add the sugar and cook for 3–5 mins on medium heat until caramelised. Return pork and fry 2–3 mins until coated. Add Shaoxing wine, light soy, dark soy, beer, bay leaves, star anise and remaining spring onions and ginger. Bring to a boil then simmer with lid on for 45 mins–1 hour, stirring occasionally. Taste and adjust seasoning. Serve with steaming rice and blanched veg."
+      }
+    ]
+  },
+  {
+    "title": "Fennel Biscotti (for coffee)",
+    "serves": 4,
+    "notes": "https://food52.com/recipes/21445-fennel-biscotti/amp",
+    "stages": [
+      {
+        "label": "Mix dough",
+        "phase": "prep",
+        "ingredients": [
+          { "item": "2 cups unbleached all-purpose flour", "prep": null, "category": "dry-goods" },
+          { "item": "3/4 cup granulated sugar, plus extra for sprinkling", "prep": null, "category": "dry-goods" },
+          { "item": "1/4 cup light brown sugar", "prep": null, "category": "dry-goods" },
+          { "item": "1 tsp baking soda", "prep": null, "category": "dry-goods" },
+          { "item": "1/4 tsp kosher salt", "prep": null, "category": "store-cupboard" },
+          { "item": "Grated zest of 2 lemons", "prep": null, "category": "produce" },
+          { "item": "1 tbsp fennel seeds, lightly crushed, plus extra for topping", "prep": null, "category": "spices" },
+          { "item": "2 large whole eggs", "prep": null, "category": "dairy" },
+          { "item": "1 large egg yolk", "prep": null, "category": "dairy" },
+          { "item": "1 large egg white, slightly beaten (for egg wash and dough if needed)", "prep": null, "category": "dairy" }
+        ],
+        "method": "Set oven rack to middle. Preheat to 150°C/300°F. Line a large sheet pan with parchment. In a stand mixer bowl, combine dry ingredients, lemon zest and fennel seed with fingertips. Attach bowl with paddle. Add whole eggs and yolk and mix. Turn out the sticky dough, knead a few times on a floured surface and cut into two equal pieces."
+      },
+      {
+        "label": "First bake",
+        "phase": "cook",
+        "timing": "50 minutes",
+        "ingredients": [],
+        "method": "Form each piece into a log about 30cm long by 5cm wide on the parchment-lined pan. Keep logs at least 10cm apart — they spread significantly. Brush with egg wash, sprinkle with extra fennel seeds and sugar. Bake for 50 minutes."
+      },
+      {
+        "label": "Slice & second bake",
+        "phase": "cook",
+        "timing": "30 minutes",
+        "ingredients": [],
+        "method": "Remove from oven and cool on rack for 10 minutes. Do not turn off the oven. Separate each log from parchment with a metal spatula. On a cutting board, slice logs diagonally into 1cm slices with a serrated knife. Lay cut-side down on an unlined sheet pan. Bake 15 minutes, flip, bake another 15 minutes. Cool completely on a rack."
+      }
+    ]
+  },
+  {
+    "title": "Bazlama / Turkish Flatbread",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Activate yeast",
+        "phase": "prep",
+        "timing": "10 minutes",
+        "ingredients": [
+          { "item": "2 tsp dry yeast (10g)", "prep": null, "category": "dry-goods" },
+          { "item": "2 tsp sugar (10g)", "prep": null, "category": "dry-goods" },
+          { "item": "165ml warm water", "prep": null, "category": "store-cupboard" },
+          { "item": "165ml warm milk", "prep": null, "category": "dairy" }
+        ],
+        "method": "Add yeast and sugar to bowl. Stir in warm milk to dissolve. Cover for 10 minutes until foamy."
+      },
+      {
+        "label": "Make & prove dough",
+        "phase": "rest",
+        "timing": "1 hour",
+        "ingredients": [
+          { "item": "500g flour", "prep": null, "category": "dry-goods" },
+          { "item": "1 tsp salt (5g)", "prep": null, "category": "store-cupboard" },
+          { "item": "1 tbsp olive oil (15ml)", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Sift flour into a large bowl and add salt. Add the yeast liquid and mix with a spoon. Add olive oil and knead by hand for 2 minutes — dough will be very soft and slightly sticky. Cover and leave in a warm place for 1 hour until doubled in size."
+      },
+      {
+        "label": "Shape & cook",
+        "phase": "cook",
+        "ingredients": [],
+        "method": "Sprinkle work surface with flour and knock back the dough. Divide into 6 equal balls. Cover while you work to prevent drying. Roll each ball into a circle 18cm across, about 5mm thick. Cook in a hot dry pan on medium heat for about 3 minutes per side until golden brown and bubbling. While one is cooking, roll the next."
+      },
+      {
+        "label": "Garnish",
+        "phase": "finish",
+        "ingredients": [
+          { "item": "Fresh parsley", "prep": "finely chop", "category": "produce" },
+          { "item": "Red pepper flakes", "prep": null, "category": "spices" },
+          { "item": "Olive oil", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Brush each flatbread with olive oil and sprinkle with parsley and red pepper flakes."
+      }
+    ]
+  },
+  {
+    "title": "No-Bake Mango Lime Cheesecake",
+    "serves": 4,
+    "notes": "Avoid using fresh mango pulp: an enzyme in raw mango can prevent the gelatin from setting. Canned mangoes are fine.",
+    "stages": [
+      {
+        "label": "Crust",
+        "phase": "cook",
+        "timing": "15 minutes",
+        "ingredients": [
+          { "item": "55g unsalted butter, melted, plus extra for greasing", "prep": null, "category": "dairy" },
+          { "item": "140g graham crackers or speculoos", "prep": null, "category": "dry-goods" },
+          { "item": "2 tbsp (25g) dark brown sugar", "prep": null, "category": "dry-goods" }
+        ],
+        "method": "Generously butter and line an 8–9 inch springform pan with parchment. Grease again and chill. Crush crackers to fine crumbs. Mix with brown sugar and melted butter until it resembles wet sand. Press into an even layer in the pan. Freeze for 10–15 minutes."
+      },
+      {
+        "label": "Filling",
+        "phase": "cook",
+        "timing": "30 minutes",
+        "ingredients": [
+          { "item": "7g granulated gelatin (1 packet)", "prep": null, "category": "dry-goods" },
+          { "item": "60ml hot water (50–60°C)", "prep": null, "category": "store-cupboard" },
+          { "item": "240ml heavy cream", "prep": null, "category": "dairy" },
+          { "item": "200g granulated sugar", "prep": null, "category": "dry-goods" },
+          { "item": "450g cream cheese, cubed, at room temperature", "prep": null, "category": "dairy" },
+          { "item": "120ml canned unsweetened mango pulp", "prep": null, "category": "store-cupboard" },
+          { "item": "Zest and juice of 1 lime", "prep": null, "category": "produce" },
+          { "item": "½ tsp ground cardamom", "prep": null, "category": "spices" }
+        ],
+        "method": "Hydrate gelatin: sprinkle over 60ml room-temperature water, let swell 5 minutes, then stir in 60ml hot water until dissolved. Meanwhile, whip heavy cream and 100g sugar to stiff peaks. Transfer to a bowl. In the same clean bowl, beat cream cheese and remaining sugar until smooth (5 min). Add mango pulp and lime juice, beat until combined. Mix in dissolved gelatin. Fold in whipped cream, lime zest and cardamom by hand. Pour over crust, smooth top and refrigerate 30 minutes."
+      },
+      {
+        "label": "Glaze & set",
+        "phase": "rest",
+        "timing": "6 hours or overnight",
+        "ingredients": [
+          { "item": "7g granulated gelatin (1 packet)", "prep": null, "category": "dry-goods" },
+          { "item": "240ml canned unsweetened mango pulp", "prep": null, "category": "store-cupboard" },
+          { "item": "2 tbsp (25g) granulated sugar", "prep": null, "category": "dry-goods" },
+          { "item": "1 tsp lime juice and 1 tsp lime zest", "prep": null, "category": "produce" }
+        ],
+        "method": "Hydrate second gelatin packet as before. Whisk mango pulp and sugar, then mix in dissolved gelatin, lime juice and zest. Pour over cheesecake and swirl to coat evenly. Cover with plastic wrap and refrigerate until fully set, at least 6 hours or overnight."
+      }
+    ]
+  },
+  {
+    "title": "White Chocolate & Raspberry Loaf Cake",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Cake",
+        "phase": "cook",
+        "timing": "55–65 minutes",
+        "ingredients": [
+          { "item": "200g unsalted butter or Stork", "prep": null, "category": "dairy" },
+          { "item": "200g caster sugar", "prep": null, "category": "dry-goods" },
+          { "item": "200g self-raising flour", "prep": null, "category": "dry-goods" },
+          { "item": "4 medium eggs", "prep": null, "category": "dairy" },
+          { "item": "150g white chocolate chips/chunks", "prep": null, "category": "dry-goods" },
+          { "item": "200g raspberries", "prep": null, "category": "produce" }
+        ],
+        "method": "Preheat oven to 160°C fan. Line a 2lb loaf tin with parchment. Beat together butter and sugar until light and fluffy. Add self-raising flour and eggs and beat until smooth. Fold through raspberries and white chocolate chips. Pour into tin and bake for 55–65 minutes. Cool in tin 10 minutes then turn onto a wire rack."
+      },
+      {
+        "label": "Buttercream",
+        "phase": "cook",
+        "ingredients": [
+          { "item": "125g unsalted butter, room temperature", "prep": null, "category": "dairy" },
+          { "item": "250g icing sugar", "prep": null, "category": "dry-goods" },
+          { "item": "125g white chocolate", "prep": "melt and cool", "category": "dry-goods" }
+        ],
+        "method": "Melt white chocolate and leave to cool. Beat butter in a mixer until really smooth. Add icing sugar and beat until smooth. Add cooled white chocolate and beat again."
+      },
+      {
+        "label": "Decorate",
+        "phase": "finish",
+        "ingredients": [
+          { "item": "Fresh raspberries", "prep": null, "category": "produce" },
+          { "item": "Freeze-dried raspberries", "prep": null, "category": "produce" },
+          { "item": "White chocolate chips", "prep": null, "category": "dry-goods" }
+        ],
+        "method": "Spread or pipe buttercream over cooled cake. Top with fresh raspberries, freeze-dried raspberries and white chocolate chips."
+      }
+    ]
+  },
+  {
+    "title": "Carrot Cake",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Prep pecans",
+        "phase": "prep",
+        "ingredients": [
+          { "item": "100g pecans, plus extra to decorate", "prep": "toast and roughly chop", "category": "dry-goods" },
+          { "item": "1 tbsp butter", "prep": null, "category": "dairy" },
+          { "item": "25g sugar", "prep": null, "category": "dry-goods" },
+          { "item": "1 tsp cinnamon", "prep": null, "category": "spices" }
+        ],
+        "method": "Toast and chop pecans in a pan with 1 tbsp butter, 25g sugar and 1 tsp cinnamon. Set aside."
+      },
+      {
+        "label": "Batter",
+        "phase": "cook",
+        "timing": "30 minutes",
+        "ingredients": [
+          { "item": "200g self-raising wholemeal flour", "prep": null, "category": "dry-goods" },
+          { "item": "100g sultanas or raisins", "prep": null, "category": "dry-goods" },
+          { "item": "150g butter, melted, plus extra for greasing", "prep": null, "category": "dairy" },
+          { "item": "150g soft light brown sugar", "prep": null, "category": "dry-goods" },
+          { "item": "3 free-range eggs", "prep": null, "category": "dairy" },
+          { "item": "1 tsp bicarbonate of soda", "prep": null, "category": "dry-goods" },
+          { "item": "½ tsp salt", "prep": null, "category": "store-cupboard" },
+          { "item": "1 tsp ground cinnamon", "prep": null, "category": "spices" },
+          { "item": "½ tsp grated nutmeg", "prep": null, "category": "spices" },
+          { "item": "Zest of 1 orange", "prep": null, "category": "produce" },
+          { "item": "200g carrots, peeled and grated", "prep": null, "category": "produce" }
+        ],
+        "method": "Preheat oven to 180°C. Grease and line the bases of 2 × 18cm sandwich tins. Whisk melted butter, sugar and eggs in a large bowl until thoroughly combined and almost doubled in volume. Sift together flour, bicarb, salt and spices and fold very gently into the liquid mixture, taking care not to knock out air. Fold in orange zest, sultanas, grated carrot and pecans. Divide between tins. Bake for about 30 minutes until a skewer comes out clean. Cool in tins."
+      },
+      {
+        "label": "Icing & assemble",
+        "phase": "finish",
+        "ingredients": [
+          { "item": "150g full-fat cream cheese", "prep": null, "category": "dairy" },
+          { "item": "50g light brown soft sugar", "prep": null, "category": "dry-goods" },
+          { "item": "Zest of ½ lemon and a squeeze of juice", "prep": null, "category": "produce" }
+        ],
+        "method": "Beat together cream cheese, light brown sugar and lemon zest and juice. Refrigerate until the cakes are cool. Remove cakes from tins. Spread half the icing on one cake, place the other on top, ice the top and decorate with remaining pecans."
+      }
+    ]
+  },
+  {
+    "title": "Baked Cheesecake",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Crust",
+        "phase": "cook",
+        "timing": "10 minutes",
+        "ingredients": [
+          { "item": "85g butter, plus extra for tin", "prep": null, "category": "dairy" },
+          { "item": "140g digestive biscuits, crushed to fine crumbs", "prep": null, "category": "dry-goods" },
+          { "item": "1 tbsp granulated or golden caster sugar", "prep": null, "category": "dry-goods" }
+        ],
+        "method": "Bring all ingredients to room temperature 2 hours before cooking. Set oven shelf to middle and preheat to 160°C fan. Line the base of a 23cm springform tin. Melt 85g butter, stir in biscuit crumbs and 1 tbsp sugar. Press into base and bake 10 minutes. Cool on wire rack. Increase oven to 200°C fan."
+      },
+      {
+        "label": "Filling",
+        "phase": "cook",
+        "timing": "10 minutes",
+        "ingredients": [
+          { "item": "900g full-fat soft cheese (e.g. Philadelphia)", "prep": null, "category": "dairy" },
+          { "item": "250g golden caster sugar", "prep": null, "category": "dry-goods" },
+          { "item": "3 tbsp plain flour", "prep": null, "category": "dry-goods" },
+          { "item": "Pinch of salt", "prep": null, "category": "store-cupboard" },
+          { "item": "1½ tsp vanilla extract", "prep": null, "category": "store-cupboard" },
+          { "item": "Finely grated zest of 1 lemon (about 2 tsp)", "prep": null, "category": "produce" },
+          { "item": "1½ tsp lemon juice", "prep": null, "category": "produce" },
+          { "item": "3 large eggs, plus 1 yolk", "prep": null, "category": "dairy" },
+          { "item": "200ml soured cream", "prep": null, "category": "dairy" }
+        ],
+        "method": "Beat 900g cream cheese at medium-low speed for 2 minutes. On low, gradually add 250g sugar, 3 tbsp flour and a pinch of salt, scraping down twice. Add 1½ tsp vanilla, 2 tsp lemon zest and 1½ tsp lemon juice. Whisk in 3 eggs and 1 yolk one at a time, scraping twice. Add 200ml soured cream and whisk to blend — batter should be smooth and airy. Brush tin sides with melted butter. Pour in filling. Bake 10 minutes at 200°C."
+      },
+      {
+        "label": "Slow bake & cool",
+        "phase": "rest",
+        "timing": "2 hours 45 minutes",
+        "ingredients": [],
+        "method": "Reduce oven to 90°C fan and bake 45 minutes more — filling should have a slight wobble. Turn off oven. For a creamy centre open the door slightly; for a drier texture leave closed. Cool in oven for 2 hours. The top may crack slightly."
+      },
+      {
+        "label": "Topping & set",
+        "phase": "rest",
+        "timing": "8 hours or overnight",
+        "ingredients": [
+          { "item": "284ml soured cream", "prep": null, "category": "dairy" },
+          { "item": "1 tbsp sugar", "prep": null, "category": "dry-goods" },
+          { "item": "2 tsp lemon juice", "prep": null, "category": "produce" }
+        ],
+        "method": "Combine soured cream with 1 tbsp sugar and 2 tsp lemon juice. Spread over cheesecake to the edges. Cover loosely with foil and refrigerate at least 8 hours or overnight."
+      }
+    ]
+  },
+  {
+    "title": "Cinnamon Rolls",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Dough & first prove",
+        "phase": "prep",
+        "timing": "2 hours",
+        "ingredients": [
+          { "item": "92g granulated sugar", "prep": null, "category": "dry-goods" },
+          { "item": "½ tsp salt", "prep": null, "category": "store-cupboard" },
+          { "item": "85g butter, soft", "prep": null, "category": "dairy" },
+          { "item": "1 egg", "prep": null, "category": "dairy" },
+          { "item": "Zest of 1 lemon", "prep": null, "category": "produce" },
+          { "item": "454g bread flour", "prep": null, "category": "dry-goods" },
+          { "item": "7g instant yeast (1 packet)", "prep": null, "category": "dry-goods" },
+          { "item": "236ml buttermilk", "prep": null, "category": "dairy" }
+        ],
+        "method": "In a stand mixer combine sugar, salt and soft butter. Beat at medium-high for 1 minute until fluffy. Scrape down, add egg and lemon zest; mix 2 minutes. Add bread flour, yeast and buttermilk. Mix with paddle on medium-low until just combined, then switch to dough hook and knead 10 minutes on medium. Place in an oiled bowl, cover with plastic wrap and leave to rise for 2 hours."
+      },
+      {
+        "label": "Fill, roll & shape",
+        "phase": "prep",
+        "ingredients": [
+          { "item": "64g white sugar", "prep": null, "category": "dry-goods" },
+          { "item": "32g brown sugar", "prep": null, "category": "dry-goods" },
+          { "item": "1½ tbsp cinnamon", "prep": null, "category": "spices" }
+        ],
+        "method": "Oil work surface and rolling pin. Knead dough briefly to release air, then roll to approx 35 × 45cm. Mix white sugar, cinnamon and brown sugar; sprinkle generously over dough. Roll up tightly. Trim 2.5cm from each end, then slice into 12 equal rolls."
+      },
+      {
+        "label": "Second prove & bake",
+        "phase": "cook",
+        "timing": "90 minutes prove + 20 minutes bake",
+        "ingredients": [],
+        "method": "Oil and line a large baking dish with parchment. Place rolls with ~1cm space between them. Cover and prove 90 minutes. Begin preheating oven to 175°C at 60 minutes. Brush tops with melted butter. Bake 20 minutes until golden brown. Cool 5 minutes."
+      },
+      {
+        "label": "Frosting",
+        "phase": "finish",
+        "ingredients": [
+          { "item": "227g cream cheese, room temperature", "prep": null, "category": "dairy" },
+          { "item": "113g butter, room temperature", "prep": null, "category": "dairy" },
+          { "item": "256g powdered sugar, sifted", "prep": null, "category": "dry-goods" },
+          { "item": "Heavy cream, to thin if needed", "prep": null, "category": "dairy" }
+        ],
+        "method": "Beat cream cheese and butter until smooth. Add sifted powdered sugar and beat again. Thin with a little heavy cream if needed. Spread generously over warm rolls."
+      }
+    ]
+  },
+  {
+    "title": "Dal Makhani",
+    "serves": 8,
+    "stages": [
+      {
+        "label": "Soak dal",
+        "phase": "day-before",
+        "timing": "at least 6 hours",
+        "ingredients": [
+          { "item": "400g urad dal (black lentils)", "prep": "rinse until clear", "category": "dry-goods" }
+        ],
+        "method": "Rinse lentils until water runs clear. Drain and place in a deep pan with generously boiled water. Soak for at least 6 hours or up to 24 hours."
+      },
+      {
+        "label": "Boil dal",
+        "phase": "cook",
+        "timing": "45 minutes",
+        "ingredients": [],
+        "method": "Rinse soaked lentils and return to a large pan. Cover with cold water, bring to boil and continue boiling for 45 minutes. Skim off any scum. Dal should be soft enough to crush against the side of the pan."
+      },
+      {
+        "label": "Onion & tomato base",
+        "phase": "cook",
+        "ingredients": [
+          { "item": "60g unsalted butter, plus 30g to finish", "prep": null, "category": "dairy" },
+          { "item": "2 large onions, finely sliced", "prep": null, "category": "produce" },
+          { "item": "4cm ginger, peeled and finely chopped", "prep": null, "category": "produce" },
+          { "item": "10 cloves garlic, crushed", "prep": null, "category": "produce" },
+          { "item": "6 tbsp tomato purée", "prep": null, "category": "store-cupboard" },
+          { "item": "1¾ tsp salt", "prep": null, "category": "store-cupboard" },
+          { "item": "¾ tsp chilli powder (or to taste)", "prep": null, "category": "spices" }
+        ],
+        "method": "While dal boils, melt 60g butter in a frying pan over medium heat. Add onions and cook 15 minutes. Add ginger and garlic and fry 5 more minutes. Add tomato purée, salt and chilli powder, stir well and take off the heat."
+      },
+      {
+        "label": "Long simmer",
+        "phase": "cook",
+        "timing": "1½ hours or more",
+        "ingredients": [
+          { "item": "400ml whole milk", "prep": null, "category": "dairy" }
+        ],
+        "method": "Once dal is cooked, keep just enough water to cover and drain the rest. Add the onion-tomato mixture and the milk. Bring to boil then simmer, stirring every now and then, for around 1½ hours. If sauce runs low, top up with equal parts whole milk and water. The sauce should turn darker, richer and creamier — keep going beyond 1½ hours if not yet rich and dark. Taste, adjust salt and chilli, then stir in the remaining 30g butter just before serving."
+      }
+    ]
+  },
+  {
+    "title": "One-pot Dahl",
+    "serves": 8,
+    "stages": [
+      {
+        "label": "Aromatics",
+        "phase": "cook",
+        "ingredients": [
+          { "item": "1 tsp olive oil or coconut oil", "prep": null, "category": "store-cupboard" },
+          { "item": "2 onions, diced", "prep": null, "category": "produce" },
+          { "item": "3 garlic cloves, finely chopped", "prep": null, "category": "produce" },
+          { "item": "1 tbsp fresh ginger, peeled and grated", "prep": null, "category": "produce" },
+          { "item": "½ red chilli, finely chopped (or ½ tsp dried chilli flakes)", "prep": null, "category": "produce" }
+        ],
+        "method": "Heat oil in a large pan over medium heat. Add onion and cook gently for 5 minutes. Add garlic, ginger and red chilli and cook a few more minutes."
+      },
+      {
+        "label": "Spices",
+        "phase": "cook",
+        "timing": "1 minute",
+        "ingredients": [
+          { "item": "½ tsp cumin", "prep": null, "category": "spices" },
+          { "item": "½ tsp coriander", "prep": null, "category": "spices" },
+          { "item": "½ tsp mustard seeds", "prep": null, "category": "spices" },
+          { "item": "2 tsp ground turmeric", "prep": null, "category": "spices" },
+          { "item": "1 tsp garam masala", "prep": null, "category": "spices" }
+        ],
+        "method": "Add all the spices to the pan and cook for 1 minute, stirring constantly."
+      },
+      {
+        "label": "Simmer",
+        "phase": "cook",
+        "timing": "15–20 minutes",
+        "ingredients": [
+          { "item": "200g dried red lentils, rinsed and drained", "prep": null, "category": "dry-goods" },
+          { "item": "400ml tin chopped tomatoes", "prep": null, "category": "store-cupboard" },
+          { "item": "400ml tin coconut milk", "prep": null, "category": "store-cupboard" },
+          { "item": "500ml vegetable stock", "prep": null, "category": "store-cupboard" },
+          { "item": "Salt and pepper", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Add lentils, tinned tomatoes with their juice, coconut milk and stock. Stir to combine. Season with salt and pepper. Cook on medium-low heat for 15–20 minutes until reduced and thick. Taste and add more chilli if desired."
+      },
+      {
+        "label": "Finish",
+        "phase": "finish",
+        "ingredients": [
+          { "item": "Juice of half a lemon", "prep": null, "category": "produce" },
+          { "item": "2 handfuls fresh spinach, washed", "prep": null, "category": "produce" }
+        ],
+        "method": "Stir in lemon juice and spinach until wilted. Serve warm with rice, naan or poppadoms."
+      }
+    ]
+  },
+  {
+    "title": "Key Lime Pie",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Crust",
+        "phase": "cook",
+        "timing": "8–12 minutes",
+        "ingredients": [
+          { "item": "170g graham crackers", "prep": null, "category": "dry-goods" },
+          { "item": "4 tbsp unsalted butter, melted and cooled", "prep": null, "category": "dairy" },
+          { "item": "2 tbsp granulated sugar", "prep": null, "category": "dry-goods" },
+          { "item": "1 large egg yolk", "prep": null, "category": "dairy" },
+          { "item": "½ tsp salt crystals", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Preheat oven to 180°C (non-fan). Crush crackers to very fine uniform crumbs. Mix with sugar, egg yolk, salt and melted butter until it resembles wet sand. Press firmly up the sides and across the bottom of a 23cm pie plate using a straight-sided glass. Place on a sheet pan and bake until fragrant and dark brown at the edges, 8–12 minutes. Reduce oven to 160°C."
+      },
+      {
+        "label": "Filling",
+        "phase": "rest",
+        "timing": "15–20 minutes bake + 3 hours chill",
+        "ingredients": [
+          { "item": "5 large egg yolks", "prep": null, "category": "dairy" },
+          { "item": "Pinch of salt", "prep": null, "category": "store-cupboard" },
+          { "item": "1 tbsp freshly grated lime zest", "prep": null, "category": "produce" },
+          { "item": "400ml tin sweetened condensed milk", "prep": null, "category": "store-cupboard" },
+          { "item": "175ml fresh lime juice, strained", "prep": null, "category": "produce" },
+          { "item": "1 tsp vanilla extract", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Whisk lime zest, egg yolks, condensed milk, lime juice, salt and vanilla until completely smooth. Pour into the pie plate and smooth the surface. Bake until set with just a slight wobble in the centre, 15–20 minutes. Cool completely at room temperature (about 1 hour) then refrigerate until cold, at least 2 hours."
+      },
+      {
+        "label": "Topping",
+        "phase": "finish",
+        "timing": "15 minutes",
+        "ingredients": [
+          { "item": "60g cream cheese, at room temperature", "prep": null, "category": "dairy" },
+          { "item": "2 tbsp powdered sugar", "prep": null, "category": "store-cupboard" },
+          { "item": "240ml heavy cream, chilled", "prep": null, "category": "dairy" }
+        ],
+        "method": "Work cream cheese and powdered sugar together with a spatula until smooth. Switch to a whisk and slowly drizzle in cold cream, whisking constantly to prevent lumps, until you have a softly whipped cream forming medium peaks. Spread over the cold pie nearly to the edges. Chill until set, at least 15 minutes."
+      }
+    ]
+  },
+  {
+    "title": "Tikka Masala (Meera Sodha)",
+    "serves": 4,
+    "stages": [
+      {
+        "label": "Marinate chicken tikka",
+        "phase": "day-before",
+        "timing": "6–8 hours",
+        "ingredients": [
+          { "item": "675g skinless chicken thighs or breasts, cut into 2½cm chunks", "prep": null, "category": "meat" },
+          { "item": "1¼ tsp salt", "prep": null, "category": "store-cupboard" },
+          { "item": "3 tbsp lemon juice", "prep": null, "category": "produce" },
+          { "item": "1 tbsp root ginger, peeled and finely grated", "prep": null, "category": "produce" },
+          { "item": "2 cloves garlic, finely grated or crushed", "prep": null, "category": "produce" },
+          { "item": "1 tsp ground cumin", "prep": null, "category": "spices" },
+          { "item": "1 tsp paprika", "prep": null, "category": "spices" },
+          { "item": "½–¾ tsp chilli powder", "prep": null, "category": "spices" },
+          { "item": "6 tbsp whipping cream", "prep": null, "category": "dairy" },
+          { "item": "½ tsp garam masala", "prep": null, "category": "spices" }
+        ],
+        "method": "Place chicken in a non-reactive bowl. Rub in salt and lemon juice. Prod lightly with the tip of a knife and rub in again. Set aside 20 minutes. Add ginger, garlic, cumin, paprika, chilli powder, cream and garam masala. Mix well, cover and refrigerate for 6–8 hours."
+      },
+      {
+        "label": "Masala sauce",
+        "phase": "cook",
+        "timing": "30 minutes",
+        "ingredients": [
+          { "item": "4 tbsp olive or sunflower oil", "prep": null, "category": "store-cupboard" },
+          { "item": "140g onions, halved and finely sliced", "prep": null, "category": "produce" },
+          { "item": "1 tbsp root ginger, peeled and finely grated", "prep": null, "category": "produce" },
+          { "item": "5–6 cloves garlic, crushed", "prep": null, "category": "produce" },
+          { "item": "1 tbsp ground coriander", "prep": null, "category": "spices" },
+          { "item": "½ tsp turmeric", "prep": null, "category": "spices" },
+          { "item": "¾ tsp chilli powder", "prep": null, "category": "spices" },
+          { "item": "2 tsp paprika", "prep": null, "category": "spices" },
+          { "item": "4 tbsp yogurt", "prep": null, "category": "dairy" },
+          { "item": "1 tin peeled plum tomatoes or 2 medium tomatoes, very finely chopped", "prep": null, "category": "store-cupboard" },
+          { "item": "350ml chicken stock", "prep": null, "category": "store-cupboard" },
+          { "item": "¼ tsp salt, or to taste", "prep": null, "category": "store-cupboard" },
+          { "item": "¼ tsp garam masala", "prep": null, "category": "spices" },
+          { "item": "4 tbsp coriander leaves, chopped", "prep": null, "category": "produce" }
+        ],
+        "method": "Heat 4 tbsp oil in a large lidded pan over medium-high heat. Add onions and fry until brown, 6–7 minutes. Add ginger and garlic and fry 1 minute. Add ground coriander, turmeric, chilli powder and paprika. Stir 10 seconds, then add yogurt 1 tbsp at a time, stirring and frying until each spoonful is absorbed. Add tomatoes and fry 3–4 minutes until pulpy. Add stock and salt, bring to a simmer, cover and simmer gently 15–20 minutes until thick. Stir in garam masala and coriander."
+      },
+      {
+        "label": "Grill tikka",
+        "phase": "cook",
+        "timing": "12 minutes",
+        "ingredients": [
+          { "item": "3 tbsp olive or sunflower oil", "prep": null, "category": "store-cupboard" }
+        ],
+        "method": "Preheat grill to highest setting. Thread chicken onto skewers. Brush with 3 tbsp oil and balance skewers on the rim of a shallow baking tray so meat is suspended. Grill about 13cm from heat for 6 minutes each side until lightly browned, cooked through and charred in places."
+      },
+      {
+        "label": "Combine & serve",
+        "phase": "finish",
+        "ingredients": [],
+        "method": "Reheat the masala sauce. Fold in the grilled chicken pieces. Serve immediately."
+      }
+    ]
+  }
+]
